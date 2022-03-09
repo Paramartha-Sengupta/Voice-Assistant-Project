@@ -3,7 +3,7 @@
 Have you ever felt that some of your daily tasks could be done by your computer- without your involvement? 
 Like playing a soothing song for your relaxation or helping you with the meaning of "reconnaissance"? You may think I have Alexa/Siri for that- But how cool is it to make your own Virtual Assistant? Like instead of being just a consumer, what if you could be the creator? 
 
-Seems interesting???
+Seems interesting???  
 ![image](https://user-images.githubusercontent.com/68769656/157397575-58da95ab-942b-474f-96f7-008644f6258c.png)
 
 In this Repository I have created a Virtual Assiatnt of my own. Well, being a huge fan of the Office US, I named him Dwight!
@@ -41,9 +41,7 @@ Well, We see Dwight is an awesome assistant! Now let us deep-dive a bit on the T
 Let us deep-dive to understand what are the action items we need to keep in mind for creating an awesome virtual assistant?
 1. Speaking out the commands for the user
 2. Receiving, Recording and Storing the voice command from the user
-3. Identifying the user request
-4. Connecting the request to the required application API
-5. Initiating the API response to display the output
+3. Connecting the request to the required application API and displaying the action initaiated as the output
 
 Let us understand each of the items in the above list in details:
 
@@ -58,15 +56,26 @@ You can read more about this library from this link: https://pypi.org/project/py
 
 #### 2. Receiving, Recording and Storing the voice command from the user
 
-Have used the "speechrecognition
+Have used the "speechrecognition" library for this action. This library is used for performing speech recognition, with support for several engines and APIs, online and offline. Once the command is recieved it is stored into the variable as a string. The instruction (which is now present in the string variable), can now be parsed to find the keywords that the assistant shall be acting upon. For example, If the user requests something like- "Can you play a video for me?". With the help of the speech recognition library this instruction will be captured. The parser will be focussing on the word "video", and identify the action that it needs to play a video in Youtube.
 
+You can read more about the library here: https://pypi.org/project/SpeechRecognition/
 
+### 3. Connecting the request to the required application API and displaying the action initaiated as the output
 
+In this application, we have used "Chromedriver.exe", and will be providing the X-Path link for it to execute. For Example, I am interested to know about Elon Musk, and I request Dwight as "Can you give me some information on Elom Musk?". The text processing action would be focussing on the "information" part, and knows that it will be reaching out to the Wikipedia page for this information. Now in the search bar of Wikipedia (which will be fetched by the X-Path information provided, the key word "Elon Musk" will be placed. The click button for searching will be automatically initiated- and voila! The Wikipedia Page for viewing information about Elon Musk will be available.
 
+# Next targets for Development:
 
+## Short-Term targets
 
+1. Enable Dwight to Share a mail to the desired recipient.  
+2. Implementing the voice assiatnce to find help on more specific domains:
+    i. Like suggesting the best platform for buying a Wishlist item- (Store/Platform that is having the best reviewed item at the cheapest prices)  
+    ii. Recommendation System Enablement  
+    iii. Give insights on investment etc.  
+3. Calling Features  
 
+## Long-Term Targets
 
-
-
-
+1. Creating a Draft E-mail writeup for the topic as mentioned by the user
+2. Home Appliances control through Voice Assitant (Need to check on the Feasibility- Hardware Requirements)
