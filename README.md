@@ -4,14 +4,12 @@ Have you ever felt that some of your daily tasks could be done by your computer-
 Like playing a soothing song for your relaxation or helping you with the meaning of "reconnaissance"? You may think I have Alexa/Siri for that- But how cool is it to make your own Virtual Assistant? Like instead of being just a consumer, what if you could be the creator? 
 
 Seems interesting???
-
 ![image](https://user-images.githubusercontent.com/68769656/157397575-58da95ab-942b-474f-96f7-008644f6258c.png)
 
 In this Repository I have created a Virtual Assiatnt of my own. Well, being a huge fan of the Office US, I named him Dwight!
-
 ![image](https://user-images.githubusercontent.com/68769656/157396476-316e1de8-b191-44ff-a366-7385cf6ff6f0.png)
 
-So the question arises, what can Dwight do for me?
+So the question arises, what can Dwight do for me?  
 ![image](https://user-images.githubusercontent.com/68769656/157404136-1a24b7a1-9903-4907-8bfd-e3bbcf5dd520.png)
 
 
@@ -39,6 +37,30 @@ OMG! That's amazing... Are you still interested to learn more tricks and perform
 Well, We see Dwight is an awesome assistant! Now let us deep-dive a bit on the Technical End
 
 # Vitual Assistant- Technical Aspect
+
+Let us deep-dive to understand what are the action items we need to keep in mind for creating an awesome virtual assistant?
+1. Speaking out the commands for the user
+2. Receiving, Recording and Storing the voice command from the user
+3. Identifying the user request
+4. Connecting the request to the required application API
+5. Initiating the API response to display the output
+
+Let us understand each of the items in the above list in details:
+
+#### 1.  Speaking out the commands for the user
+
+We have implemented the python library- "pyttsx" for the same. pyttsx3 is a text-to-speech conversion library in Python. Unlike alternative libraries, it works offline, and is compatible with both Python 2 and 3. There are multiple advantages associates with this library:
+  i. The Speaking style is completely controlled by the Programmer and is simple to use
+  ii. The Speaking Voice, Rate and Volume can be easily modified to suit the requirement
+  iii. The Documentation is clear and complete.
+
+You can read more about this library from this link: https://pypi.org/project/pyttsx3/
+
+#### 2. Receiving, Recording and Storing the voice command from the user
+
+Have used the "speechrecognition
+
+
 
 
 
