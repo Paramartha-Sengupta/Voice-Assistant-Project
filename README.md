@@ -6,7 +6,7 @@ Like playing a soothing song for your relaxation or helping you with the meaning
 Seems interesting???  
 ![image](https://user-images.githubusercontent.com/68769656/157397575-58da95ab-942b-474f-96f7-008644f6258c.png)
 
-In this Repository I have created a Virtual Assiatnt of my own. Well, being a huge fan of the Office US, I named him Dwight!
+In this Repository I have created a Virtual Assistant of my own. Well, being a huge fan of the Office US, I named him Dwight!
 ![image](https://user-images.githubusercontent.com/68769656/157396476-316e1de8-b191-44ff-a366-7385cf6ff6f0.png)
 
 So the question arises, what can Dwight do for me?  
