@@ -1,60 +1,7 @@
-# -*- coding: utf-8 -*-
-
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jan 17 16:22:39 2021
-
-@author: PARAMARTHA SENGUPTA
-"""
 
 import pyttsx3 as p
 import speech_recognition as sr
-#from YT_auto import *
-from selenium import webdriver
-from key_file import * 
-from key_file_2 import * 
-import requests
-import randfacts
-
-#Search in Wikipedia
-class Infow():
-    def __init__(self):
-        self.driver=webdriver.Chrome(executable_path='C:/Users/Paramartha/Desktop/chromedriver_win32/chromedriver.exe')
-    
-    def get_info(self,query):
-        self.query=query
-        self.driver.get(url='https://www.wikipedia.org')
-        search=self.driver.find_element_by_xpath('//*[@id="searchInput"]')
-        search.click()
-        search.send_keys(query)
-        enter=self.driver.find_element_by_xpath('//*[@id="search-form"]/fieldset/button')
-        enter.click()
-        
-
-#Youtube
-class music():
-    def __init__(self):
-        self.driver=webdriver.Chrome(executable_path='C:/Users/Paramartha/Desktop/chromedriver_win32/chromedriver.exe')
-    
-    def play(self,query):
-        self.query=query
-        self.driver.get(url='https://www.youtube.com/results?search_query='+query)
-        video=self.driver.find_element_by_xpath('//*[@id="title-wrapper"]')
-        video.click()
-        
-
-#Jokes
-url='https://official-joke-api.appspot.com/random_joke'
-json_data=requests.get(url).json()
-
-arr=['','']
-arr[0]=json_data['setup']
-arr[1]=json_data['punchline']
-
-def joke():
-    return arr
-
-
+from Voice_Assistant_Config import *
 
 engine=p.init()
 #rate=engine.getProperty('rate')
@@ -160,4 +107,3 @@ elif 'weather' in text or 'condition outside' in text:
         speak('The Temparature feels like {}'.format(temp_feels))
         speak('The overall weather is: {}'.format(description))
                
-        
