@@ -1,7 +1,11 @@
+from selenium import webdriver
+import requests
+
+ 
 #Search in Wikipedia
 class Infow():
     def __init__(self):
-        self.driver=webdriver.Chrome(executable_path='C:/Users/Paramartha/Desktop/chromedriver_win32/chromedriver.exe')
+        self.driver=webdriver.Chrome(executable_path='C:/Users/USER/Desktop/chromedriver.exe')
     
     def get_info(self,query):
         self.query=query
@@ -16,7 +20,7 @@ class Infow():
 #Youtube
 class music():
     def __init__(self):
-        self.driver=webdriver.Chrome(executable_path='C:/Users/Paramartha/Desktop/chromedriver_win32/chromedriver.exe')
+        self.driver=webdriver.Chrome(executable_path='C:/Users/USER/Desktop/chromedriver.exe')
     
     def play(self,query):
         self.query=query
@@ -25,7 +29,7 @@ class music():
         video.click()
         
 #Jokes
-url='https://official-joke-api.appspot.com/random_joke'
+"""url='https://official-joke-api.appspot.com/random_joke'
 json_data=requests.get(url).json()
 
 arr=['','']
@@ -33,4 +37,17 @@ arr[0]=json_data['setup']
 arr[1]=json_data['punchline']
 
 def joke():
-    return arr
+    return arr"""
+
+
+key='5fb3d5ec05a14630bd1608fe136a9f28'
+
+api_address='https://newsapi.org/v2/top-headlines?country=in&apiKey='+key
+json_data=requests.get(api_address).json()
+
+#News
+news_arr=[]
+def news():
+    for i in range(1):
+        news_arr.append("number"+str(i+1)+":- "+json_data["articles"][i]['title']+'.')
+    return news_arr
